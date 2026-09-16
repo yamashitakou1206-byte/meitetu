@@ -1,0 +1,66 @@
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Yu Gothic",Meiryo,sans-serif;background:#fff;color:#111}
+body{overflow:auto}
+button{font:inherit;background:#fff;border:2px solid #111;border-radius:7px;cursor:pointer}
+.topbar{height:88px;border-bottom:2px solid #111;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;padding:0 10px;position:sticky;top:0;background:#fff;z-index:5}
+.back{border:0;font-size:30px;text-align:left;white-space:nowrap}
+.title{text-align:center;font-size:29px;letter-spacing:.05em}
+.tools{display:flex;justify-content:flex-end;align-items:center;gap:10px}
+.tools button{height:52px;min-width:52px;font-size:27px}
+.tools button:first-child,.tools button:last-child{border:0}
+.screen{display:grid;grid-template-columns:minmax(580px, 1.7fr) minmax(330px,.9fr);min-height:calc(100vh - 145px)}
+.left{border-right:2px solid #111}
+.train-head{display:grid;grid-template-columns:2fr 1fr;height:122px}
+.type{background:#000;color:#fff;font-size:74px;display:flex;align-items:center;justify-content:center;line-height:1}
+.train-meta{border-bottom:2px solid #111}
+.service{font-size:76px;height:100%;display:flex;align-items:center;justify-content:center;gap:28px}
+.service span{font-size:31px;align-self:flex-end;margin-bottom:20px}
+.route-row{display:grid;grid-template-columns:55px 220px 1fr;height:122px;border-bottom:2px solid #111}
+.labels{font-size:29px;text-align:center;border-right:2px solid #111}
+.labels div{height:50%;display:flex;align-items:center;justify-content:center;border-bottom:2px solid #111}
+.labels div:last-child{border-bottom:0}
+.stations{font-size:36px;border-right:2px solid #111}
+.stations div{height:50%;display:flex;align-items:center;padding-left:12px;border-bottom:2px solid #111}
+.stations div:last-child{border-bottom:0}
+.train-no{display:flex;align-items:center;justify-content:space-around}
+.train-no strong{font-size:55px;font-weight:500}
+.train-no small{font-size:29px}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+thead{display:none}
+td{border-right:2px solid #111;border-bottom:2px solid #111;height:63px;padding:0 8px;white-space:nowrap}
+td.station{width:29%;font-size:30px}
+td.time{width:27%;font-size:38px;text-align:right}
+td.sec{width:9%;font-size:24px;text-align:left;vertical-align:top;padding-top:11px}
+td.mark{width:8%;font-size:25px;text-align:center}
+tr.active td{background:#fff2a6}
+span.pink{background:#ff75b5;padding:0 2px}
+.right{background:#fff}
+.start-title,.news-title{height:61px;background:#ddd;border-bottom:2px solid #111;font-size:34px;display:flex;align-items:center;padding-left:8px}
+.clock-card{height:255px;border-bottom:2px solid #111;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+#analog{width:170px;height:170px}
+#digital{font-size:52px;letter-spacing:2px}
+.news-title{height:42px;font-size:24px;background:#999}
+.news{height:125px;border-bottom:2px solid #111;padding:7px;font-size:24px}
+.news span{margin-left:18px}
+.status{font-size:14px;color:#555;padding:8px}
+.bottom{position:sticky;bottom:0;background:#fff;border-top:2px solid #111;padding:8px;display:flex;gap:8px;justify-content:center}
+.bottom button{padding:8px 16px;font-size:17px}
+.dark{background:#111;color:#fff}
+.dark .topbar,.dark button,.dark .right,.dark .bottom{background:#111;color:#fff}
+.dark .type{background:#fff;color:#111}
+.dark .news-title,.dark .start-title{background:#555;color:#fff}
+.dark .status{color:#ccc}
+
+@media(max-width:850px){
+ .topbar{height:68px;grid-template-columns:1fr auto 1fr}
+ .back{font-size:20px}.title{font-size:20px}.tools{gap:4px}.tools button{height:42px;min-width:42px;font-size:21px}
+ .screen{grid-template-columns:1fr}
+ .left{border-right:0}
+ .right{border-top:2px solid #111}
+ .train-head{height:92px}.type{font-size:53px}.service{font-size:55px}.service span{font-size:23px;margin-bottom:14px}
+ .route-row{height:92px;grid-template-columns:42px 150px 1fr}
+ .labels{font-size:22px}.stations{font-size:27px}.train-no strong{font-size:38px}.train-no small{font-size:20px}
+ td{height:54px}td.station{font-size:23px}td.time{font-size:29px}td.sec{font-size:19px}.start-title{font-size:26px}
+ #digital{font-size:39px}.clock-card{height:225px}
+}
